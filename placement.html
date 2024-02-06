@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Help Desk</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(imsbackground.jpg);
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            /* margin-top: 90px; */
+            background-color: rgba(0, 0, 0, 0.647);
+        }
+
+        .container:hover {
+            border: 1px solid white;
+            box-shadow: 0 0 20px white, 0 0 20px white, 0 0 20px white, 0 0 20px white;
+            /* background-color: rgba(0, 0, 0, 0.647); */
+        }
+
+        .heading{
+            color: rgb(255, 255, 255);
+        }
+        
+        .heading:hover{
+            color: white;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 16px;
+        }
+
+        h2 {
+            margin-left: 50px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+            background-color: white;
+        }
+
+        th {
+            background-color: rgba(0, 0, 0, 0.647);
+            color: white;
+        }
+
+        .company{
+            margin-left: 50px;
+            font-weight: bold;
+            color: rgb(255, 255, 255,0.7);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <h2 class="heading"><br>Placement Help Desk</h2>
+            <div class="company">Company Coming For Placement Drive</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Requirements</th>
+                    </tr>
+                </thead>
+                <tbody id="placementTableBody"></tbody>
+            </table>
+        </div>
+
+        <script>
+            const companies = [
+                { name: "ANRSoftware", requirements: "<strong>Eligible Course :</strong> MCA & B.Tech (All Branches). <br> <strong>Eligible Criteria :</strong> Open for all unplaced students. <br> <strong>Job Role :</strong> Graduate Trainee Engineer. <br>  <strong>Designation :</strong> Trainee <br> <strong>CTC -</strong> Rs/-3.11 [Rs/-4.15LPA(After 1st Yearly Review) & Rs/-5.50LPA(After 2nd Yearly Review)]" },
+                { name: "Amazon", requirements: "<strong>Eligible Course :</strong> MBA, MCA & B.Tech (All Branches)[Only for unplaced students]. <br> <strong>Eligible Criteria :</strong> No % Criteria. <br> <strong>Job Role :</strong> Virtual Customer Service Associate (Work From Home). <br> <strong>CTC -</strong> Rs/-3.50 LPA" },
+                { name: "PlanetSpark", requirements: "<strong>Eligible Course :</strong> MBA, MCA & B.Tech (All Branches). <br> <strong>Eligible Criteria :</strong> Open for all unplaced students(Students who can appear earlier should also be eligible to apply). <br> <strong>Job Role :</strong> Business Development Counsellor. <br> <strong>CTC -</strong> 6.5 LPA (4.1 LPA Fixed + 2.4 LPA Variable) <br> Stipend - INR 21,428 per month (during 1 month of training (fixed + incentives)" },
+                { name: "Vardhman RECYCLING LLP", requirements: "<strong>Eligible Course :</strong> MBA & MCA. <br> <strong>Eligible Criteria :</strong> Open for all unplaced students of MBA &  MCA. <br> <strong>Job Roles :</strong> <br> <strong>1. Team Leaders: </strong>  Individuals in these roles will be responsible for leading and managing teams to ensure a smooth workflow.)  <br> CTC - 4.2 LPA. <br> Course : MBA & MCA  <br> <strong>2.  Supervisors: </strong>(This role involves overseeing specific operational aspects and maintaining high-quality standards.)  <br> CTC - 3 to 3.6 LPA. <br> Course : MBA & MCA  <br> <strong>3.  MBA (Finance Students): </strong>  (Join various financial roles, contributing to financial analysis and strategic planning.) <br> CTC - 4.8 to 6 LPA. <br> Course : MBA" }
+            ];
+
+            const tableBody = document.getElementById("placementTableBody");
+            companies.forEach(company => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                <td>${company.name}</td>
+                <td>${company.requirements}</td>
+            `;
+                tableBody.appendChild(row);
+            });
+        </script>
+</body>
+
+</html>
