@@ -148,7 +148,8 @@ a {
     }
 
     .header .logo {
-        width: 60%;
+        width: 18%;
+        height:100%;
     }
 
     .navbar-link {
